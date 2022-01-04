@@ -1,0 +1,11 @@
+History Model:
+{
+	"type" : "object",
+	"properties" : {
+	"Year" : {"type" : "string"},
+	"Place" : {"type" : "string"},
+	"Event" : {"type" : "string"},
+	"Description" : {"type" : "string"}
+	
+	}
+}
