@@ -97,8 +97,20 @@ AWS provides the services for us to test the Lambda Code
 ![testing the GET method](https://user-images.githubusercontent.com/63557848/148157259-36005b86-18ec-40db-8889-99073eab7897.png)
 
 
+# Part 5 - Create the GET API
 
+## 1. Creating the POST methos
+**'POST API'** Similar to the GET method, we write a Lambda code for POST
 
+![POST API created using the lambda Function](https://user-images.githubusercontent.com/63557848/148157739-7111a368-ac0b-40e7-b682-7afedb6a67c3.png)
+
+![Lambda POST code](https://user-images.githubusercontent.com/63557848/148157751-42502ba2-974d-472f-a4d3-5f8efe8883a0.png)
+
+Also we test it using AWS 
+
+![Lambda code POST Test response](https://user-images.githubusercontent.com/63557848/148157797-3f278c67-ecad-4506-aa91-630545820f36.png)
+
+![Testing the POST Lambda Code](https://user-images.githubusercontent.com/63557848/148157811-2e12eb07-8745-4f04-a9d4-ed2774e9e8a7.png)
 
 
 
