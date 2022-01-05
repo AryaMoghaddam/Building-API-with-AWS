@@ -36,10 +36,15 @@
 
 ## 1. DynamoDB NoSQL
 **'DynamoDB'** is a NoSQL database, which allows for creating and keeping records. 
+
 ![creating a DynamoDB NoSQL database](https://user-images.githubusercontent.com/63557848/148151619-76f7a433-adfe-4856-bc7e-d05912193773.png)
+
 Added 38 items (crucial events in History) 
+
 ![Items Created](https://user-images.githubusercontent.com/63557848/148151734-3cd6d72d-4e42-4d9e-b74d-6376b1d6e055.png)
+
 Next  we get the ARN(Amazon Resource Name), we will later add the ARN to the system
+
 ![ARN Created(database cloud id URL)](https://user-images.githubusercontent.com/63557848/148151943-6aaeaf5f-1866-4589-bab9-f46985676630.png)
 
 
