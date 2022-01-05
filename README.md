@@ -10,8 +10,7 @@
 ### I- DataBase Setup:
 1. [Create a Dynamo DB database table](#1-DynamoDB-NoSQL)
 2. [Create records in the table, with id identifier, and Attribute values](#2-creating-items)
-3. [38 items collected (Crucial events in history of the World)](#3-data-base-table)
-4. [Get the ARN](#4-Amazon-Resource-name)
+3. [Get the ARN](#4-Amazon-Resource-name)
 
 ### II- Database Role to Access Database:
 1. [Setup IAM](#1-login-or-register-to-astradb-and-create-database)
@@ -34,23 +33,17 @@
 
 # Part 1 - DataBase Setup
 
-## 1. DynamoDB NoSQL
+## 1. Create a DynamoDB NoSQL database table
 **'DynamoDB'** is a NoSQL database, which allows for creating and keeping records. 
-
 ![creating a DynamoDB NoSQL database](https://user-images.githubusercontent.com/63557848/148151619-76f7a433-adfe-4856-bc7e-d05912193773.png)
 
-Added 38 items (crucial events in History) 
-
+## 2. Create records in the table, with id identifier, and Attribute values
+**'creating-items'** Crucial events in the History of the wrold with attributes Year,Event,Place and Description
 ![Items Created](https://user-images.githubusercontent.com/63557848/148151734-3cd6d72d-4e42-4d9e-b74d-6376b1d6e055.png)
 
-Next  we get the ARN(Amazon Resource Name), we will later add the ARN to the system
-
-![ARN Created(database cloud id URL)](https://user-images.githubusercontent.com/63557848/148151943-6aaeaf5f-1866-4589-bab9-f46985676630.png)
-
-
-
-
-
+## 3. Get the ARN
+**'Amazon Resource Name'** Next  we get the ARN(Amazon Resource Name), we will later add the ARN to the system
+![ARN Created(database cloud id URL)](https://user-images.githubusercontent.com/63557848/148153785-16cbad9b-43c3-4e37-93d9-56d12edf9d31.png)
 
 ### Swagger 2.0 JSON File:
 ```
