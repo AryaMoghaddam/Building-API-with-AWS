@@ -78,6 +78,39 @@ Finally we’re gonna put the data response in JSON format and return the respon
 
 After getting the '200 OK' green light, we deploy the Lambda.
 
+### GET Lambda code:
+```
+//Bring in the AWS Library
+var AWS = require('aws-sdk');
+
+//Create DynamoDB document client
+exports.handler = async (event, context) => {
+var awsddbdc = new AWS.DynamoDB.DocumentClient ({apiVersion: '2012-08-10'});
+
+//Path Parameters
+const {year} = event.pathParameters;
+
+//Query Parameters
+var params = {
+	TableName : 'history',
+	Key : {
+		Year : year
+		//Year: '1921'
+		
+	}
+};
+
+const data = await awsddbdc.get(params).promise();
+const response = {
+	statusCode: '200' ,
+	body: JSON.stringify(data.Item)
+}
+
+return response;
+
+};
+
+```
 ![LAmbda Code Deployed](https://user-images.githubusercontent.com/63557848/148156541-0c16b1a7-203c-469e-9efb-a4bdd3e887b0.png)
 
 
@@ -115,8 +148,36 @@ Also we test it using AWS
 
 
 
-### Swagger 2.0 JSON File:
+### GET Lambda code:
 ```
+//Bring in the AWS Library
+var AWS = require('aws-sdk');
 
+//Create DynamoDB document client
+exports.handler = async (event, context) => {
+var awsddbdc = new AWS.DynamoDB.DocumentClient ({apiVersion: '2012-08-10'});
+
+//Path Parameters
+const {year} = event.pathParameters;
+
+//Query Parameters
+var params = {
+	TableName : 'history',
+	Key : {
+		Year : year
+		//Year: '1921'
+		
+	}
+};
+
+const data = await awsddbdc.get(params).promise();
+const response = {
+	statusCode: '200' ,
+	body: JSON.stringify(data.Item)
+}
+
+return response;
+
+};
 
 ```
