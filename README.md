@@ -1,4 +1,4 @@
-# 🎓 Time Capsule API
+# �:ledger: Time Capsule API
 
 ## 🎯 Objectives
 * Creating an API using **Amazon Web Services**
