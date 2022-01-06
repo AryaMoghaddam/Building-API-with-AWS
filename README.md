@@ -30,7 +30,7 @@
 1. [Setup IAM](#Using-Base-URL-to-Read-and-Post-records)
 
 
-# Part 1 - DataBase Setup
+# :compass:Part 1 - DataBase Setup
 
 ## 1. Create a DynamoDB NoSQL database table
 **'DynamoDB'** is a NoSQL database, which allows for creating and keeping records. 
