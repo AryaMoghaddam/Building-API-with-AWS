@@ -67,11 +67,13 @@
 
 
 # Part 3 - Write Lambda to read the records using GET
-**'Lambda Code'** First we bring in the AWS library code that is the Amazon Web Services software development kit. We’re going to use that code later on; next we’re going to use a handler that’s going to handle the “event” that comes in, the event being an HTTP request. it’s going to provide that information in the form of an event, that is what’s being sent, as well as context(The information about the event)
-Next we contact the Dynamo Database using there’s an specific API version to not worry about the updates.
+**'Lambda Code'** First we bring in the AWS library code that is the Amazon Web Services software development kit. We’re going to use that code later on. 
+Next we’re going to use a handler that’s going to handle the “event” that comes in, the event being an HTTP request. 
+The handler is going to provide that information in the form of an event, that is what’s being sent, as well as context (The information about the event)
+Next we contact the Dynamo Database using an specific API version to not worry about the updates.
 We create the path parameter as well as the other parameters, and we’re gonna use the key to get the Year id.
 Next we’re going to use the parameters and the GET function from Amazon library to GET the info.
-We’re gonna get the response ‘200 OK’ .
+As a result We get the response ‘200 OK’ .
 Finally we’re gonna put the data response in JSON format and return the response.
 
 ![Creating a Lambda Program in Node js ](https://user-images.githubusercontent.com/63557848/148156418-ed596442-84ff-40c4-9b62-8f35a16890d2.png)
@@ -137,7 +139,40 @@ AWS provides the services for us to test the Lambda Code
 
 ![POST API created using the lambda Function](https://user-images.githubusercontent.com/63557848/148157739-7111a368-ac0b-40e7-b682-7afedb6a67c3.png)
 
-![Lambda POST code](https://user-images.githubusercontent.com/63557848/148157751-42502ba2-974d-472f-a4d3-5f8efe8883a0.png)
+### POST Lambda Code:
+```
+//Bring in the AWS library
+var AWS = require ('aws-sdk');
+
+//Create DynamoDB document client 
+exports.handler = async (event, context) => {
+var awsddbdc = new AWS.DynamoDB.DocumentClient ({apiVersion: '2012-08-10'});
+
+//Parse the incoming JSON values
+const {Year,Place,Event,Description} = JSON.parse(event.body);
+
+//Query Parameters
+var params = {
+	TableName : 'history',
+	Item: {
+		Year : Year,
+		Place : Place,
+		Event : Event,
+		Description : Description
+		//Year: '1891', Place: 'Springfield, Massachusetts', Event: 'Invention of Basketball', Description: 'Basketball was invented in 1891 by James Naismith at the YMCA International Training School (now Springfield College) in Springfield, Massachusetts.'
+	}
+}
+
+const data = await awsddbdc.put(params).promise();
+const response = {
+	statusCode: '201',
+	body: JSON.stringify(data)
+}
+
+return response;
+
+};
+```
 
 Also we test it using AWS 
 
@@ -147,37 +182,3 @@ Also we test it using AWS
 
 
 
-
-### GET Lambda code:
-```
-//Bring in the AWS Library
-var AWS = require('aws-sdk');
-
-//Create DynamoDB document client
-exports.handler = async (event, context) => {
-var awsddbdc = new AWS.DynamoDB.DocumentClient ({apiVersion: '2012-08-10'});
-
-//Path Parameters
-const {year} = event.pathParameters;
-
-//Query Parameters
-var params = {
-	TableName : 'history',
-	Key : {
-		Year : year
-		//Year: '1921'
-		
-	}
-};
-
-const data = await awsddbdc.get(params).promise();
-const response = {
-	statusCode: '200' ,
-	body: JSON.stringify(data.Item)
-}
-
-return response;
-
-};
-
-```
