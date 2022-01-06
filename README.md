@@ -35,7 +35,7 @@
 ## 1. Create a DynamoDB NoSQL database table
 **'DynamoDB'** is a NoSQL database, which allows for creating and keeping records. 
 
-![creating a DynamoDB NoSQL database](https://user-images.githubusercontent.com/63557848/148151619-76f7a433-adfe-4856-bc7e-d05912193773.png)
+![Screenshot 2022-01-06 145430](https://user-images.githubusercontent.com/63557848/148443098-54664d02-0deb-4f0b-95ed-7b01bf8a7ac4.png)
 
 ## 2. Create records in the table, with id identifier, and Attribute values
 **'creating-items'** Crucial events in the History of the wrold with attributes Year,Event,Place and Description.
