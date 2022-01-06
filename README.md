@@ -78,6 +78,17 @@ Finally we’re gonna put the data response in JSON format and return the respon
 
 After getting the '200 OK' green light, we deploy the Lambda.
 
+![LAmbda Code Deployed](https://user-images.githubusercontent.com/63557848/148156541-0c16b1a7-203c-469e-9efb-a4bdd3e887b0.png)
+
+
+# Part 4 - Create the GET API
+
+## 1. In the API module we use the GET function used to create the GET API
+**'GET API'** We use the Lambda code written for the GET method to create the Request.
+
+![Creating the GET method using the Lambda code we created before](https://user-images.githubusercontent.com/63557848/148157039-2c4b3a27-d047-473a-9c8a-04d9c49f0f73.png)
+
+
 ### GET Lambda code:
 ```
 //Bring in the AWS Library
@@ -111,17 +122,6 @@ return response;
 };
 
 ```
-![LAmbda Code Deployed](https://user-images.githubusercontent.com/63557848/148156541-0c16b1a7-203c-469e-9efb-a4bdd3e887b0.png)
-
-
-# Part 4 - Create the GET API
-
-## 1. In the API module we use the GET function used to create the GET API
-**'GET API'** We use the Lambda code written for the GET method to create the Request.
-
-![Creating the GET method using the Lambda code we created before](https://user-images.githubusercontent.com/63557848/148157039-2c4b3a27-d047-473a-9c8a-04d9c49f0f73.png)
-
-![Java script code for GET function](https://user-images.githubusercontent.com/63557848/148157136-eb106dd3-b685-4902-9eb0-fda8c6107ce2.png)
 
 AWS provides the services for us to test the Lambda Code
 
