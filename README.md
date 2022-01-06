@@ -37,7 +37,7 @@
 
 ![Screenshot 2022-01-06 145430](https://user-images.githubusercontent.com/63557848/148443098-54664d02-0deb-4f0b-95ed-7b01bf8a7ac4.png)
 
-## 2. Create records in the table, with id identifier, and Attribute values
+## 2. :card_index_dividers:Create records in the table, with id identifier, and Attribute values
 **'creating-items'** Crucial events in the History of the wrold with attributes Year,Event,Place and Description.
 
 ![Items Created](https://user-images.githubusercontent.com/63557848/148151734-3cd6d72d-4e42-4d9e-b74d-6376b1d6e055.png)
